@@ -5,12 +5,12 @@ pipeline {
         stage('Hello World Test') {
             agent {
                 docker { 
-                    image 'hello-world' 
+                    image 'busybox' 
                 }
             }
             steps {
-                sh 'echo "Running Hello World Docker Container"'
-                sh 'docker run hello-world'
+                sh 'echo "Running Hello World in Busybox Docker Container"'
+                sh 'echo "Hello, World!"'
             }
         }
     }
